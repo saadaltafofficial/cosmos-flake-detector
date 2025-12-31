@@ -95,19 +95,19 @@ Where:
 ### 1. Validator Operations
 **Scenario**: Before state-sync, verify RPC reliability
 ```bash
-./flake-detector --endpoints "rpc1.com,rpc2.com" --duration 300
+./cosmos-flake-detector --endpoints "rpc1.com,rpc2.com" --duration 300
 ```
 
 ### 2. Chain Indexers
 **Scenario**: Test CosmWasm query endpoints
 ```bash
-./flake-detector --queries "cosmwasm/wasm/v1/contract" --duration 180
+./cosmos-flake-detector --queries "cosmwasm/wasm/v1/contract" --duration 180
 ```
 
 ### 3. CI/CD Integration
 **Scenario**: Automated health checks in deployment pipeline
 ```bash
-./flake-detector --output health.json
+./cosmos-flake-detector --output health.json
 jq '.[] | select(.flakiness_score > 30)' health.json && exit 1
 ```
 
