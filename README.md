@@ -4,6 +4,24 @@
 
 **cosmos-flake-detector** is a production-ready Rust CLI tool that detects intermittent failures (flakiness) in Cosmos blockchain RPC endpoints through query-specific testing and comprehensive latency analysis.
 
+## Installation
+
+Choose either release tarball or Cargo install:
+
+### Option 1: Prebuilt binary
+```bash
+wget https://github.com/saadaltafofficial/cosmos-flake-detector/releases/download/v0.1.0/flake-detector-v0.1.0-linux-x86_64.tar.gz
+tar -xzf flake-detector-v0.1.0-linux-x86_64.tar.gz
+sudo mv flake-detector /usr/local/bin/
+flake-detector --help  # Works globally!
+```
+
+### Option 2: Cargo
+```bash
+cargo install flake-detector
+# Done! Binary is in ~/.cargo/bin/ (usually in PATH)
+```
+
 ## The Problem
 
 Cosmos chain operators face a critical challenge: **RPC endpoints that appear healthy but fail intermittently**. Traditional monitoring tools only check basic health endpoints, missing:
